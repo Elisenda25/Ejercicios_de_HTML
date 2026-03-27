@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="toolbar">
+<div class="grp grp--brand">
+<strong>MiApp</strong>
+</div>
+<div class="grp grp--search">
+<input type="search" placeholder="Buscar…" aria-label="Buscar" />
+<button class="btn btn--ghost">Atajos</button>
+</div>
+    <div class="grp grp--primary"></div>
+    <button class="btn">Nuevo</button>
+<button class="btn">Guardar</button>
+</div>
+<div class="grp grp--secondary">
+<button class="btn btn--ghost">Compartir</button>
+<button class="btn btn--ghost">Exportar</button>
+</div>
+<div class="grp grp--user">
+<img class="avatar" src="https://i.pravatar.cc/40?img=5" alt="Usuario" />
+<span>Selma</span>
+</div>
+</nav>
+    
+</body>
+</html>
+
+<style>
+
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    flex-flow: wrap;
+ }
+ .grp grp--search {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+       
+ }
+ .grp grp--primary {
+     display: flex;
+     gap: 10px;
+ }
+
+</style>

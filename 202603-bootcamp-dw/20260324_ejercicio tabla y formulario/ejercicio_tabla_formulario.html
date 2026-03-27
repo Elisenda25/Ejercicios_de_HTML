@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla y Formulario</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 40px;
+        }
+
+        /* Contenedor principal con Flexbox */
+        .contenedor {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            flex-wrap: wrap;  
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* TABLA - izquierda */
+        .tabla-contenedor {
+            flex: 1;  
+            min-width: 300px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1e2a5e;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* FORMULARIO - derecha */
+        .form-contenedor {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .form-contenedor h2 {
+            margin-bottom: 20px;
+            color: #1e2a5e;
+            font-size: 1.5rem;
+        }
+
+        .campo {
+            margin-bottom: 16px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .campo input,
+        .campo select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .campo input:focus,
+        .campo select:focus {
+            outline: none;
+            border-color: #1e2a5e;
+            box-shadow: 0 0 0 2px rgba(30, 42, 94, 0.2);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1e2a5e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background-color: #2a3a7a;
+        }
+
+               @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            
+            .contenedor {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <!-- TABLA a la izquierda -->
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Género</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ana Montero</td>
+                        <td>ana.montero@email.com</td>
+                        <td>1992-05-15</td>
+                        <td>Femenino</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos López</td>
+                        <td>carlos.lopez@email.com</td>
+                        <td>1988-11-22</td>
+                        <td>Masculino</td>
+                    </tr>
+                    <tr>
+                        <td>Selma García</td>
+                        <td>selma.garcia@email.com</td>
+                        <td>1995-03-10</td>
+                        <td>Femenino</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- FORMULARIO a la derecha -->
+        <div class="form-contenedor">
+            <h2>Agregar nuevo registro</h2>
+            <form>
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Montero" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha de nacimiento:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="genero">Género:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

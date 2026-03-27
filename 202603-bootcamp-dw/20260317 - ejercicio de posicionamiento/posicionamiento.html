@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    .contenedor {
+        border: 2px solid #333;
+        padding: 20px;
+        margin: 20px 0;
+        background: #f9f9f9;
+        position: relative;
+        /* importante para el absolute */
+        min-height: 300px;
+    }
+
+    .caja {
+        width: 150px;
+        height: 80px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .static {
+        background: #999;
+        position: static;
+        /* este es el normal, no se mueve */
+    }
+
+    .relative {
+        background: steelblue;
+        position: relative;
+        top: 20px;
+        left: 30px;
+    }
+
+    .absolute {
+        background: darkorange;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .fixed {
+        background: purple;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 120px;
+        height: 60px;
+        font-size: 12px;
+        z-index: 100;
+    }
+
+    .sticky {
+        background: darkgreen;
+        position: sticky;
+        top: 10px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .espacio {
+        height: 800px;
+        background: linear-gradient(white, #ddd);
+        padding: 20px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+    <h1>Posicionamiento CSS</h1>
+
+    <div class="contenedor">
+        <h3>Contenedor (position: relative)</h3>
+
+        <div class="caja static">
+            static<br>(normal)
+        </div>
+
+        <div class="caja relative">
+            relative<br>top:20; left:30
+        </div>
+
+        <div class="caja absolute">
+            absolute<br>bottom:10; right:10
+        </div>
+    </div>
+
+    
+    <div class="espacio">
+        <h3>Haz scroll para ver el efecto sticky y fixed</h3>
+        <p>La caja morada (fixed) siempre está abajo a la derecha, no se mueve al hacer scroll.</p>
+        <p>La caja verde (sticky) se queda pegada arriba cuando pasas de ella.</p>
+    </div>
+
+    <div class="caja fixed">
+        fixed<br>siempre visible
+    </div>
+
+</body>
+
+</html>

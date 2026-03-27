@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Ejercicio</title>
+</head>
+<link rel="stylesheet" href="estilos.css"> 
+<body>
+
+<!-- aqui van lo comentarios -->
+ <h3>ahora estoy arriba, pero quiero bajar <a href="#aqui">aqui</a></h3>
+ <h1 id="aqui">Hola Mundo</h1>
+ <p>me llamo como quieras que me llames</p>
+ 
+ 
+ <!-- <p>etiquetas comunes como titulos y subtitulos, párrafos, listas ordenadas y desordenadas</p> -->
+ 
+
+ <h3>Sobre mí </h3>
+ <!-- h para titulos; p para parrafos; ul listas ordenadas, ol listas desordenadas, li elementos de las listas-->
+ <p>mis comidas preferidas:</p>
+ 
+<ul>
+    <li><strong>ensaladas</strong></li>
+    <li>verduras a la plancha</li>
+    <li>frutos secos</li>
+</ul>
+<p>mis hobbies son:</p>
+<ol>
+    <li>leer</li>
+    <li>escuchar música</li>
+    <li><em>escribir</em></li>
+</ol>
+
+<hr>
+
+<!-- <p>ahora veremos los bloques y los inline</p> -->
+<div>
+    <p>soy un bloque</p>
+</div>
+<div>soy otro bloque <strong>inline</strong></div>
+<br>
+<!-- BLOQUE: crea el esqueleto, organiza verticalmente
+INLINE: se organiza horizontalmente, no crea un bloque nuevo, se acomoda al bloque que lo contiene --> 
+<!-- IMPORTANTE: los bloques CONTIENEN a los inline / los inline NUNCA contienen a los bloques  -->
+<br>
+<hr>
+<!-- ESTO ESTÁ MAL - pero ¿qué crees que pasará? -->
+<span>
+    <div>¿Puede un div vivir dentro de un span?</div>
+</span>
+<hr>
+
+<h2>Tipos de enlaces:</h2>
+
+    <!-- Enlaces absolutos: nos llevan a web / enlaces relativos: nos llevan a tu propio sitio
+     enlaces internos son marcadores-->
+     
+<p>ahora verremos como se ponene los enlaces: </p>
+
+<p>para saber sobre HTML <a href="https://es.wikipedia.org/wiki/HTML">clica aqui</a></p>
+
+<p>y para que abra una pestaña nueva  <a href="https://es.wikipedia.org/wiki/HTML" target="_blank">aquí</a></p>
+
+
+
+<div>
+    <p>si quieres ir a Google <a href="https://www.google.com" target="_blank">haz clic aquí</a></p>
+
+</div>
+<div>
+    <p>pero si quieres ir a Wikipedia y quedarte allí</p>
+    <p>tan solo <a href="https://es.wikipedia.org/wiki/HTML">haz clic aquí</a></p>
+
+</div>
+<!-- El enlace para ir al h1 con id="inicio" -->
+<div>y ahora para ir a incio, clica <a href="#aqui">aqui</a></div>
+<!-- El # + el nombre del id, exactamente igual -->
+
+<p>He vuelto<h1 id="aqui">aqui</h1></p>
+
+<!-- Ahora veremos como insertar imagenes, que se puede hacer desde una URL o desde un fichero local, pero hayq ue recordar que es obligatorio poner donde estan las imagenes (<src>) y el texto alternativo (<alt>) -->
+<h2>como insertar imagenes</h2>
+    <div style="text-align: center;"> 
+    <p>Esto es una imagen desde una ruta absoluta:</p>
+     <img src="https://fastly.picsum.photos/id/678/200/200.jpg?hmac=_vsd4KulLF2Ykh1bkjYgpfkfWJoqhDPrzIbvw_pHhsQ" alt="Imagen 1">
+
+</div>
+<div style="text-align: center;">
+    <p>Esto es una imagen desde una ruta relativa:</p>
+    <img src="imagenes/foto_1_porchada.jpg"  alt="Stone medieval portico a historic village square" width="200" height="200">
+    
+    </div>
+<div>
+    <p>Y esto es una imagen con un enlace, que al hacer clic en ella nos llevará a la página de Wikipedia sobre HTML</p>
+    <a href="https://es.wikipedia.org/wiki/HTML">
+        <img src="https://fastly.picsum.photos/id/678/200/200.jpg?hmac=_vsd4KulLF2Ykh1bkjYgpfkfWJoqhDPrzIbvw_pHhsQ" alt="Imagen 1">
+    </a>
+    </div>
+
+    <br>
+    <hr>
+
+    <!-- Ahora vamos a ver los selectores, tando desde dentro del HTML como desde una hoja de estilo fuera del HTML  -->
+<p>Hoja de estilos  </p>
+    <link rel="stylesheet" href="estilos.css">
+<h2>Ahora aplicaremos diferentes estilos:</h2>
+<p>este texto sera en rojo</p>
+<p>este texto sera en azul</p>
+<br>
+<p>los estilos van dentro del HTML</p>
+<h2 style="color: blue;">Título en azul</h2>
+<p style="color: aqua; font-family: 'Times New Roman', Times, serif;">esto es otro estilo</p>
+<p style="height: auto; width: 200px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">este es ya mas complejo</p>
+
+
+
+
+
+</body>
+
+</html>

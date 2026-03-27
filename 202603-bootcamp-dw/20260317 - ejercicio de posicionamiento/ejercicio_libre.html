@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio de Posicionamiento</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            height: 2000px; /* Altura extra para probar el scroll */
+            background-color: #f4f4f4;
+        }
+
+        /* 1. Menú superior Sticky */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 100;
+        }
+
+        /* Contenedor relativo para el elemento absoluto */
+        .contenedor-promo {
+            position: relative; 
+            width: 80%;
+            margin: 50px auto;
+            height: 300px;
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        /* 2. Tarjeta Absolute */
+        .tarjeta-oferta {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* 3. Botón Fixed */
+        .boton-subir {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>Menú de Navegación (Sticky)</nav>
+
+    <div class="contenedor-promo">
+        <h2>Bienvenido a la tienda</h2>
+        <p>Este es el contenedor principal del producto.</p>
+        
+        <div class="tarjeta-oferta">Oferta especial</div>
+    </div>
+
+    <a href="#" class="boton-subir">↑</a>
+
+</body>
+</html>

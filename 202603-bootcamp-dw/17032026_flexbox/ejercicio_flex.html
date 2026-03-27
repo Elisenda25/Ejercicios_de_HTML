@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    /* Reset básico */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: sans-serif;
+        padding: 20px;
+        background: #f5f5f5;
+    }
+
+    .toolbar {
+        background: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background-color: #1e2a5e;
+        /* Azul oscuro */
+        /* el resto de propiedades se mantienen */
+
+        /* REQUISITOS FLEXBOX */
+        display: flex;
+        flex-wrap: wrap;
+        /* Permite salto de línea */
+        align-items: center;
+        gap: 16px;
+        /* Espaciado entre grupos (sin márgenes sueltos) */
+    }
+
+    /* Todos los grupos tienen order: 0 por defecto */
+    .grp {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        order: 0;
+        /* Valor por defecto */
+    }
+
+    /* BRAND: se queda al principio */
+    .grp--brand {
+        order: 1;
+    }
+
+    /* SEARCH: debe crecer y encogerse */
+    .grp--search {
+        flex: 1 1 auto;
+        /* Crece y se encoge según espacio disponible */
+        min-width: 180px;
+        /* Evita que se encoja demasiado */
+        order: 2;
+    }
+
+    .grp--search input {
+        flex: 1;
+        /* El input ocupa todo el espacio disponible dentro del grupo */
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    /* PRIMARY */
+    .grp--primary {
+        order: 3;
+    }
+
+    /* SECONDARY */
+    .grp--secondary {
+        order: 4;
+    }
+
+    /* USER: debe quedar PEGADO AL EXTREMO DERECHO de su propia línea */
+    .grp--user {
+        margin-left: auto;   /* Esto lo empuja a la derecha dentro de su línea */
+        order: 5;
+        gap: 8px;
+        color: white;
+    }
+
+    /* Estilos de botones */
+    .btn {
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background: white;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.2s;
+        background-color: #3b82f6;
+        /* Azul clarito */
+        border: none;
+        /* Opcional: quitas el borde gris */
+        color: white;
+        /* Texto blanco para que se vea bien */
+    }
+
+    .btn:hover {
+        background: #f0f0f0;
+         background-color: rgba(59, 130, 246, 0.1);  
+    }
+
+    .btn--ghost {
+        border-color: transparent;
+        background: transparent;
+        background-color: transparent;
+        color: #3b82f6;
+        
+    }
+
+    .btn--ghost:hover {
+        background: #f0f0f0;
+        border-color: #ddd;
+    }
+
+    /* Avatar */
+    .avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    /* Ajuste responsive: cuando falte espacio, los grupos saltan línea */
+    @media (max-width: 700px) {
+        .toolbar {
+            gap: 12px;
+        }
+
+        .grp--search {
+            min-width: 150px;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+    <nav class="toolbar">
+        <div class="grp grp--brand">
+            <strong>MiApp</strong>
+
+        </div>
+
+        <div class=" grp grp--search">
+            <input type="search" placeholder="Buscar..." aria-label="Buscar" />
+            <button class="btn btn--ghost">Atajos</button>
+        </div>
+        <div class="grp grp--primary">
+            <button class="btn">Nuevo</button>
+            <button class="btn">Guardar</button>
+        </div>
+        <div class="grp grp--secondary">
+            <button class="btn btn--ghost">Compartir</button>
+            <button class="btn btn--ghost">Exportar</button>
+        </div>
+        <div class="grp grp--user">
+            <img class="avatar" src="https://i.pravar.cc/40?img=5" alt="usuario" />
+            <span>Selma</span>
+        </div>
+    </nav>
+
+
+
+</body>
+
+</html>
